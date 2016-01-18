@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     login(@user)
-    redirect_to @user
+    redirect_to root_path
   end
 
   # PATCH/PUT /users/1
@@ -58,6 +58,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :first_name, :last_name, :password_digest)
+      params.require(:user).permit(:email, :first_name, :last_name, :password)
     end
 end
