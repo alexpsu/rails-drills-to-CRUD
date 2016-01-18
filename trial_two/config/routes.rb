@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :articles
   resources :users
 
   get "/login", to: "sessions#new"
   post "/sessions", to: "sessions#create"
-  get "/logout", to: "sessions#destroy
+  get "/logout", to: "sessions#destroy"
 end
