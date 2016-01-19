@@ -12,7 +12,19 @@
 
 <p>
   <strong>Family pic:</strong>
-  <%= @pack.family_pic %>
+  <img src="<%= @pack.family_pic %>" class="img">
+</p>
+
+<p>
+  <strong>Wolves:</strong>
+  <% @pack.wolves.each do |wolf| %>
+      <tr>
+        <td><%= wolf.gender %></td>
+        <td><%= wolf.size %></td>
+        <td><%= wolf.color %></td>
+        <td><%= wolf.leader %></td>
+      </tr>
+    <% end %>
 </p>
 
 <%= link_to 'Edit', edit_pack_path(@pack) %> |
