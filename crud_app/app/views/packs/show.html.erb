@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @pack.state %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @pack.size %>
+</p>
+
+<p>
+  <strong>Family pic:</strong>
+  <%= @pack.family_pic %>
+</p>
+
+<%= link_to 'Edit', edit_pack_path(@pack) %> |
+<%= link_to 'Back', packs_path %>
