@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.create(article_params)
-    
+    redirect_to @article
   end
 
   # PATCH/PUT /articles/1
