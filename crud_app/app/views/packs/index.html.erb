@@ -3,8 +3,9 @@
 <h1>Wolf Packs</h1>
 
     <% @packs.each do |pack| %>
-      <div>
-        <h3><%= pack.state %></h3>
+    <br>
+      <div class="pack">
+        <h2><%= pack.state %></h2>
         <h4><%= pack.size %></h4>
         <img src="<%= pack.family_pic %>" class="img"><br>
         <button class="btn-primary"><%= link_to 'Pack', pack %></button>
@@ -12,6 +13,7 @@
         <span><%= link_to 'Delete Pack', pack, method: :delete, data: { confirm: 'Are you sure?' } %></span>
         <span><%= link_to 'Add a New Wolf', new_wolf_path %></span>
       </div>
+      <br>  
     <% end %>
 
 <br>

@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<ul>
+    <li><%= link_to "Packs", packs_path %></li>
+    <li><%= link_to "Wolves", wolves_path %></li>
+    <li><%= link_to "Create Pack", new_pack_path %></li>
+    <li><%= link_to "Create Wolf", new_wolf_path %></li>
+  <% end %>
+</ul>
 
 <%= yield %>
 

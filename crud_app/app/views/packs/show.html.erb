@@ -1,19 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>State:</strong>
-  <%= @pack.state %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @pack.size %>
-</p>
-
-<p>
-  <strong>Family pic:</strong>
-  <img src="<%= @pack.family_pic %>" class="img">
-</p>
+<img src="<%= @pack.family_pic %>" class="img">
+<h1><%= @pack.state %></h1>
+<h2><%= @pack.size %>wolves in the pack</h2>
 
 <p>
   <strong>Wolves:</strong>
