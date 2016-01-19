@@ -2,9 +2,8 @@
 
 <h1>Wolf Packs</h1>
 
-  <tbody>
     <% @packs.each do |pack| %>
-      <tr>
+      <div>
         <h3><%= pack.state %></h3>
         <h4><%= pack.size %></h4>
         <img src="<%= pack.family_pic %>" class="img"><br>
@@ -12,10 +11,8 @@
         <span><%= link_to 'Edit Pack', edit_pack_path(pack) %></span>
         <span><%= link_to 'Delete Pack', pack, method: :delete, data: { confirm: 'Are you sure?' } %></span>
         <span><%= link_to 'Add a New Wolf', new_wolf_path %></span>
-      </tr>
+      </div>
     <% end %>
-  </tbody>
-</table>
 
 <br>
 
